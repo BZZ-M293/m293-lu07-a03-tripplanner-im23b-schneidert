@@ -1,14 +1,116 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Reisebuchungs-Formular</title>
+    <meta charset="UTF-8">
+    <title>Reisebuchungs-Formular</title>
 
 </head>
 <body>
 
 <h1>Reisebuchungs-Formular</h1>
+<form action="https://it.bzz.ch/demo/formdata/index.php" method="get">
+    <section>
+        <label><h3>Flughaefen</h3>
+            <select name="flughaefen" size="6">
+                <optgroup label="deutschland">
+                    <option label="berlin">berlin</option>
+                    <option label="Koeln">koeln</option>
+                    <option label="Ulm">Ulm</option>
+                </optgroup>
+                <optgroup label="oesterreich">
+                    <option label="wien">Wien</option>
+                    <option label="salzburgg">Salzburgg</option>
+                    <option label="linz">Linz</option>
+                </optgroup>
+                <optgroup label="italien">
+                    <option label="rom">Rom</option>
+                    <option label="venedig">Venedig</option>
+                    <option label="milan">Milan</option>
+                </optgroup>
+                <optgroup label="frankreich">
+                    <option label="paris">Caesar</option>
+                    <option label="lion">Lion</option>
+                    <option label="marseille">Marseille</option>
+                </optgroup>
+            </select>
+        </label>
+    </section>
+    <section><h3>Unterkunft</h3>
+        <input type="hotel" id="hotel" name="Unterkunft" value="hotel">
+        <label for="hotel"> Hotel</label>
+        <input type="ferienwohnung" id="ferienwohnung" name="unterkunft"
+               value="ferienwohnung">
+        <label for="ferienwohnung"> Ferienwohnung</label>
+        <input type="hostel" id="Hostel" name="unterkunft" value="hostel">
+        <label for="hostel"> Hostel</label>
+    </section>
+    <section><h3>zusatzleistungen</h3>
+        <input type="checkbox" name="zusatzleistungen[]" value="Fruehstueck"
+               id="check1">
+        <label for="check1">Frühstück</label>
+        <input type="checkbox" name="zusatzleistungen[]"
+               value="Flughafentransfer"
+               id="check2">
+        <label for="check2">Flughafentransfer</label>
+        <input type="checkbox" name="zusatzleistungen[]" value="SpaZugang"
+               id="check3">
+        <label for="check3">Spa-Zugang</label>
+        <input type="checkbox" name="zusatzleistungen[]" value="chauffeur"
+               id="check4">
+        <label for="check4">chauffeur</label>
+    </section>
+    <section><h3>Date</h3>
+        <label for="startdate">startdate</label>
+        <input type="date" name="startdate" id="startdate">
+        <label for="enddate">enddate</label>
+        <input type="date" name="enddate" id="enddate">
+        <label for="durationMin">duration Min</label>
+        <input type="number" name="durationMin" id="durationMin">
+        <label for="durationMax">duration Max</label>
+        <input type="number" name="durationMax" id="durationMax">
+    </section>
+    <secton><h3>Number Of People</h3>
+        <label for="numberOfPeople">number Of People</label>
+        <input type="number" name="numberOfPeople" id="numberOfPeople">
+    </secton>
+    <section><h3>Airline</h3>
+        <input type="checkbox" name="airline[]" value="Lufthansa"
+               id="check5">
+        <label for="check5">Lufthansa</label>
+        <input type="checkbox" name="airline[]"
+               value="Swissair"
+               id="check6">
+        <label for="check6">Swissair</label>
+        <input type="checkbox" name="airline[]" value="Easyjet"
+               id="check7">
+        <label for="check7">Easyjet</label>
+        <input type="checkbox" name="airline[]" value="Eurowings"
+               id="check8">
+        <label for="check8">Eurowings</label>
+    </section>
+    <section>
+        <label><h3>Reiseziel</h3>
+            <input type="search" list="reiseziel"/>
+            <datalist id="reiseziel">
+                <option value="paris"></option>
+                <option value="wien"></option>
+                <option value="köln"></option>
+                <option value="ulm"></option>
+                <option value="linz"></option>
+                <option value="salzburg"></option>
+                <option value="marseille"></option>
+                <option value="berlin"></option>
+                <option value="lion"></option>
+            </datalist>
+        </label>
+        <button>finden!</button>
+    </section>
+    <section><h3>Email</h3>
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email">
+    </section>
 
+</form>
 
 </body>
 </html>
